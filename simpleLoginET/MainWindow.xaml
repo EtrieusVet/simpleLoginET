@@ -3,13 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:simpleLoginET"
         mc:Ignorable="d"
-        Title="Login Pa" Height="450" Width="800">
-    <Grid>
+        Title="Register Login" Height="780" Width="500"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
 
-        
-        
-        
-    </Grid>
+    <materialDesign:Card UniformCornerRadius="10" 
+                         Background="{DynamicResource MaterialDesignPaper}" 
+                         Margin="25">
+        <materialDesign:DialogHost CloseOnClickAway="True" x:Name="DialogHost">
+            
+            <StackPanel>
+                
+                <materialDesign:PopupBox HorizontalAlignment="Right"
+                                         Margin="0 20 20 0"
+                                         PlacementMode="BottomAndAlignRightEdges"
+                                         StaysOpen="False"
+                                         Height="25">
+                    
+                    <StackPanel Margin="16 10 0 6"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        
+                        <TextBlock VerticalAlignment="Center"
+                                   Text="Exit">
+                            
+                        </TextBlock>
+                        
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+        </materialDesign:DialogHost>
+
+    </materialDesign:Card>
 </Window>
