@@ -8,7 +8,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\logo_phcci_white_alt.png" />
+    <None Remove="imgs\logo_phcci_white_alt.png" />
+    <None Remove="imgs\phccilogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="6.8.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="MaterialDesignThemes" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imgs\logo_phcci_white_alt.png" />
+    <Resource Include="imgs\phccilogo.png" />
   </ItemGroup>
 
 </Project>

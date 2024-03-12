@@ -6,13 +6,14 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:simpleLoginET"
         mc:Ignorable="d"
-        Title="Register Login" Height="780" Width="500"
+        Title="Register Login" Height="500" Width="800"
         Background="{x:Null}"
         AllowsTransparency="True"
         WindowStyle="None"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
 
-    <materialDesign:Card UniformCornerRadius="10" 
+    <!--<materialDesign:Card UniformCornerRadius="10" 
                          Background="{DynamicResource MaterialDesignPaper}" 
                          Margin="25">
         <materialDesign:DialogHost CloseOnClickAway="True" x:Name="DialogHost">
@@ -39,5 +40,56 @@
             </StackPanel>
         </materialDesign:DialogHost>
 
+    </materialDesign:Card>-->
+
+    <materialDesign:Card UniformCornerRadius="30">
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.1,1.8" EndPoint="0.9,1.1">
+                    <GradientStop Color="#3c5cac" Offset="1"/>
+                    <GradientStop Color="#6cbc4c" Offset="0.24"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border Height="460"
+                    VerticalAlignment="Top"
+                    CornerRadius="0 0 100 0"
+                    Background="#010502"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="370">
+                    <Image Source="/imgs/logo_phcci_white_alt.png" 
+                       Stretch="Fill" 
+                       Height="200" 
+                       Width="200"
+                       VerticalAlignment="Top"
+                       Margin="50, 120"/>
+                </StackPanel>
+                <StackPanel Width="350">
+                    <StackPanel Margin="20 100">
+                        <TextBlock Text="User Login" 
+                                   Margin="5"
+                                   Foreground="White"
+                                   TextAlignment="Center"
+                                   FontSize="20"
+                                   FontFamily="Aharoni">
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <materialDesign:PackIcon Kind='User' Width="25" Height="25" Foreground="White"/>
+                            <TextBox x:Name="usernameLogin" Margin="10 0" materialDesign:HintAssist.Hint="Enter your username" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <materialDesign:PackIcon Kind='Lock' Width="25" Height="25" Foreground="White"/>
+                            <PasswordBox x:Name="passwordLogin" Margin="10 0" materialDesign:HintAssist.Hint="Enter your password" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
+                        </StackPanel>
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                            <Button x:Name="loginButton" Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#6cbc4c" Background="#6cbc4c" Foreground="White" ToolTip="Login" Content="Login">
+                                
+                            </Button>
+                            
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </materialDesign:Card>
 </Window>
