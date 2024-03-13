@@ -10,7 +10,7 @@
         Background="{x:Null}"
         AllowsTransparency="True"
         WindowStyle="None"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="Manual"
         ResizeMode="NoResize">
 
     <!--<materialDesign:Card UniformCornerRadius="10" 
@@ -42,6 +42,13 @@
 
     </materialDesign:Card>-->
 
+
+<!--
+#06080f
+#040803
+#3c5cac
+#6cbc4c-->
+
     <materialDesign:Card UniformCornerRadius="30">
         <Grid>
             <Grid.Background>
@@ -52,8 +59,14 @@
             </Grid.Background>
             <Border Height="460"
                     VerticalAlignment="Top"
-                    CornerRadius="0 0 100 0"
-                    Background="#010502"/>
+                    CornerRadius="0 0 100 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.6, 1.5" EndPoint="1, 1.1">
+                        <GradientStop Color="#06080f" Offset="0.9"/>
+                        <GradientStop Color="#040803" Offset="0"/> 
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
             <StackPanel Orientation="Horizontal">
                 <StackPanel Width="370">
                     <Image Source="/imgs/logo_phcci_white_alt.png" 
@@ -70,7 +83,7 @@
                                    Foreground="White"
                                    TextAlignment="Center"
                                    FontSize="20"
-                                   FontFamily="Aharoni">
+                                   FontFamily="Lucida Console">
                         </TextBlock>
                         <StackPanel Orientation="Horizontal" Margin="10">
                             <materialDesign:PackIcon Kind='User' Width="25" Height="25" Foreground="White"/>
@@ -80,14 +93,20 @@
                             <materialDesign:PackIcon Kind='Lock' Width="25" Height="25" Foreground="White"/>
                             <PasswordBox x:Name="passwordLogin" Margin="10 0" materialDesign:HintAssist.Hint="Enter your password" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
                         </StackPanel>
-                        <StackPanel Margin="10" HorizontalAlignment="Center">
-                            <Button x:Name="loginButton" Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#6cbc4c" Background="#6cbc4c" Foreground="White" ToolTip="Login" Content="Login">
-                                
+                        <StackPanel Margin="10" HorizontalAlignment="Center" Orientation="Vertical">
+                            <Button x:Name="loginButton" Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#6cbc4c"  Foreground="White" ToolTip="Login" Content="Login">
+                                <Button.Background>
+                                    <LinearGradientBrush StartPoint="0.6, 1.5" EndPoint="1, 1.1">
+                                        <GradientStop Color="#06080f" Offset="0.9"/>
+                                        <GradientStop Color="#040803" Offset="0"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
                             </Button>
-                            
+                            <Button x:Name="registerButton" FontSize="12" Width="260" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="Transparent" Background="Transparent" Foreground="White" ToolTip="Login" Content="Don't have an account? Click here!">
+
+                            </Button>
                         </StackPanel>
                     </StackPanel>
-
                 </StackPanel>
             </StackPanel>
         </Grid>
