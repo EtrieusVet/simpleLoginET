@@ -23,6 +23,15 @@ namespace simpleLoginET
         public MainWindow()
         {
             InitializeComponent();
+            LoginSection.Content = new Login(this);
+            
         }
+
+
+        private void buttonExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
     }
 }

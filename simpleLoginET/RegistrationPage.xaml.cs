@@ -10,28 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace simpleLoginET
 {
     /// <summary>
-    /// Interaction logic for RegistrationWindow.xaml
+    /// Interaction logic for RegistrationPage.xaml
     /// </summary>
-    public partial class RegistrationWindow : Window
+    public partial class RegistrationPage : Page
     {
-        public RegistrationWindow()
+        MainWindow _mainWindow;
+        public RegistrationPage(MainWindow mainWindow)
         {
             InitializeComponent();
-        }
-
-        private void buttonExit_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
+            _mainWindow = mainWindow;
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            _mainWindow.LoginSection.Content = new Login(_mainWindow);
         }
     }
 }

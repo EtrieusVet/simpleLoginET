@@ -3,10 +3,86 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:simpleLoginET"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Register Page" Height="500" Width="700"
+        Background="{x:Null}"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" AllowsTransparency="True">
+
+    <materialDesign:Card UniformCornerRadius="30">
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.1,1.8" EndPoint="0.9,1.1">
+                    <GradientStop Color="#3c5cac" Offset="1"/>
+                    <GradientStop Color="#6cbc4c" Offset="0.24"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Border Height="460"
+                    VerticalAlignment="Top"
+                    CornerRadius="0 0 100 0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.6, 1.5" EndPoint="1, 1.1">
+                        <GradientStop Color="#06080f" Offset="0.9"/>
+                        <GradientStop Color="#040803" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="280">
+                    <Image Source="/imgs/logo_phcci_white_alt.png" 
+                       Stretch="Fill" 
+                       Height="181" 
+                       Width="182"
+                       Margin="50, 140"/>
+                </StackPanel>
+                <StackPanel Width="330">
+                    <StackPanel Margin="0,120,0,100" Width="280">
+                        <TextBlock Text="Register" 
+                                   Margin="5"
+                                   Foreground="White"
+                                   TextAlignment="Center"
+                                   FontSize="20"
+                                   FontFamily="Lucida Console">
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <materialDesign:PackIcon Kind='User' Width="25" Height="25" Foreground="White"/>
+                            <TextBox x:Name="usernameLogin" Margin="10 0" materialDesign:HintAssist.Hint="Enter your username" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <materialDesign:PackIcon Kind='Lock' Width="25" Height="25" Foreground="White"/>
+                            <PasswordBox x:Name="firstPassword" Margin="10 0" materialDesign:HintAssist.Hint="Enter your password" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <materialDesign:PackIcon Kind='Lock' Width="25" Height="25" Foreground="White"/>
+                            <PasswordBox x:Name="secondPassword" Margin="10 0" materialDesign:HintAssist.Hint="Confirm your password" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
+                        </StackPanel>
+                        <StackPanel Margin="10" HorizontalAlignment="Center" Orientation="Vertical">
+                            <Button x:Name="registerButton" Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#6cbc4c"  Foreground="White" ToolTip="Register" Content="Register">
+                                <Button.Background>
+                                    <LinearGradientBrush StartPoint="0.6, 1.5" EndPoint="1, 1.1">
+                                        <GradientStop Color="#06080f" Offset="0.9"/>
+                                        <GradientStop Color="#040803" Offset="0"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="homeButton" FontSize="12" Width="260" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="Transparent" Background="Transparent" Foreground="White" ToolTip="Sign in." Content="Already have an account? Click here!" Click="homeButton_Click">
+
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Width="90">
+                    <Button Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                            Background="{x:Null}"
+                            ToolTip="Close"
+                            x:Name="buttonExit" Click="buttonExit_Click">
+                        <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30"/>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </materialDesign:Card>
 </Window>
