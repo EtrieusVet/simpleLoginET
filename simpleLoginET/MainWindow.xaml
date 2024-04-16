@@ -49,7 +49,7 @@
 #6cbc4c-->
 
     <materialDesign:Card UniformCornerRadius="30">
-        <Grid>
+        <Grid MouseDown="Border_MouseDown">
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0.1,1.8" EndPoint="0.9,1.1">
                     <GradientStop Color="#3c5cac" Offset="1"/>
@@ -82,7 +82,7 @@
                             Background="{x:Null}"
                             ToolTip="Close"
                             x:Name="buttonExit" Click="buttonExit_Click">
-                        <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30"/>
+                        <materialDesign:PackIcon Kind="Close" Foreground="White" Width="28" Height="28"/>
                     </Button>
                 </StackPanel>
             </StackPanel>

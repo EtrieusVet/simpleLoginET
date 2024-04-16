@@ -31,5 +31,10 @@ namespace simpleLoginET
         {
             _mainWindow.LoginSection.Content = new Login(_mainWindow);
         }
+
+        private void registerButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

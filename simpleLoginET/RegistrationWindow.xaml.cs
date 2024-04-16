@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace simpleLoginET
 {
@@ -32,6 +33,11 @@ namespace simpleLoginET
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void registerButton_Click(object sender, RoutedEventArgs e)
+        {
+            // sqlConnection connection = Sql // idontgetit
         }
     }
 }

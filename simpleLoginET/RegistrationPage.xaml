@@ -22,7 +22,7 @@
                     </TextBlock>
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind='User' Width="25" Height="25" Foreground="White"/>
-                        <TextBox x:Name="usernameLogin" Margin="10 0" materialDesign:HintAssist.Hint="Enter your username" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
+                        <TextBox x:Name="usernameRegister" Margin="10 0" materialDesign:HintAssist.Hint="Enter your username" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <materialDesign:PackIcon Kind='Lock' Width="25" Height="25" Foreground="White"/>
@@ -33,7 +33,7 @@
                         <PasswordBox x:Name="secondPassword" Margin="10 0" materialDesign:HintAssist.Hint="Confirm your password" Foreground="White" Width="250" BorderBrush="#3c5cac" CaretBrush="#3c5cac"/>
                     </StackPanel>
                     <StackPanel Margin="10" HorizontalAlignment="Center" Orientation="Vertical">
-                        <Button x:Name="registerButton" Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#6cbc4c"  Foreground="White" ToolTip="Register" Content="Register">
+                        <Button x:Name="registerButton" Width="100" Height="40" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#6cbc4c"  Foreground="White" ToolTip="Register" Content="Register" Click="registerButton_Click">
                             <Button.Background>
                                 <LinearGradientBrush StartPoint="0.6, 1.5" EndPoint="1, 1.1">
                                     <GradientStop Color="#06080f" Offset="0.9"/>
